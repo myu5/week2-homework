@@ -1,0 +1,13 @@
+<h1>Dice Game</h1>
+<hr>
+<%= image_tag "#{@number1}.png"%><%= image_tag "#{@number2}.png"%>
+<br>
+<% if @goal_description %>
+	<h2><%= @goal_description %></h2>
+<% end %>
+<h3><%= @description %></h3>
+<% if @button_text.eql? "Start Over" %>
+<a href = "/dice"><%=@button_text%></a>
+<% else %>
+<a href = "/dice/roll?point=<%= @goal%>"><%= @button_text %></a>
+<% end %>
